@@ -13,22 +13,51 @@
         <!--=====font awesome CDN =====-->
 
         <!--=====css links=====-->
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
+
+        <!-- Modal -->
+        <div id="editModal" class="modal">
+       <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Details</h2>
+            <div class="trasactions-display">
+                <h3>Transfer from Dominic</h3>
+                 <div class="amount">$300.00</div>
+                 <small class="status success">
+                    <i class="fa fa-check"></i>
+                    <span class="success">successful</span>
+                 </small>
+            </div>
+
+            <div class="trans-details">
+                <h2>transaction details</h2>
+
+                <ul>
+                    <li>transaction type <span>Bank deposit</span></li>
+                    <li>Senders Details <span>Dominic Chigozie</span></li>
+                    <li>Transaction No. <span>2239u9u9499800</span></li>
+                    <li>Transaction No. <span>Dec 25th, 2023 09:34</span></li>
+                </ul>
+            </div>
+            
+        </div>
+        </div>
+
         <div class="body-container">
             <!-- ==the side bar== -->
             <header>
                 <i class="fa-regular fa-circle-xmark"></i>
  
                 <div class="logo">
-                    <a href="#"><img src="./img/dev.png" alt></a>
+                    <a href="#"><img src="./assets/img/dev.png" alt></a>
                 </div>
 
                 <!-- the admin thumbnail -->
                 <div class="admin-thubnail">
                     <div class="admin-image">
-                        <img src="./img/CEO.jpg" alt>
+                        <img src="./assets/img/CEO.jpg" alt>
                     </div>
                     <div class="admin-info">
                         <h4>John Milk</h4>
@@ -38,14 +67,14 @@
 
                <!-- the list items -->
                 <ul class="nav-list">
-                    <li class="active"><a href="index.html"><i
+                    <li><a href="index.html"><i
                                 class="fa-solid fa-gauge"></i>
                             <span>Dashbard</span></a></li>
                     <li><a href="shipment.html"><i class="fa-solid fa-truck"></i>
                             <span>Shipment</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-credit-card"></i>
+                    <li class="active"><a href="./payment.html"><i class="fa-solid fa-credit-card"></i>
                             <span>Payment History</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-sliders"></i>
+                    <li><a href="./setting.html"><i class="fa-solid fa-sliders"></i>
                             <span>Settings</span></a></li>
                     <li><a href=""><i class="fa-solid fa-headset"></i>
                             <span>Support / Help Desk</span></a></li>
@@ -86,7 +115,7 @@
                                 </div>
                         <div class="admin-thubnail dropdown-btn">
                             <div class="admin-image">
-                                <img src="./img/CEO.jpg" alt>
+                                <img src="./assets/img/CEO.jpg" alt>
                             </div>
                             <div class="admin-info">
                                 <h4>John Milk</h4>
@@ -95,7 +124,7 @@
                             </div>
                             <ul class="dropdown">
                                 <li><a href="#">My profile</a></li>
-                                <li><a href="#">Log Out</a></li>
+                                <li><a href="/index.html">Log Out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,70 +134,60 @@
                 <!-- services -->
                  <div class="service">
                     <div class="top">
-                        <h1>Projects</h1>
-                        <a href="./serviceadd.html">Add New</a>
+                        <h1>Payment History</h1>
                     </div>
                     <div class="bottom">
                         <table>
                             <thead>
                                 <tr>
                                     <th>S/N</th>
-                                    <th>Name</th>
-                                    <th>Category</th>
-                                    <th>actions</th>
+                                    <th>Sender</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Package</th>
+                                    <th>Date </th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td data-cell="S/N">1</td>
-                                    <td data-cell="name">Desktop Mockup</td>
-                                    <td data-cell="Category ">Software</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
+                                    <td data-cell="Sender">Dominic</td>
+                                    <td data-cell="Amount ">$300</td>
+                                    <td data-cell="Status" class="success">success</td>
+                                    <td data-cell="Package ">Iphone 15 pro</td>
+                                    <td data-cell="Date ">1/2/3404</td>
+                                    <td data-cell="Action" class="actions"><a href="" class="editShipmentBtn"><i class="fa-solid fa-eye"></i> <span>view</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
                                 </tr>
                                 <tr>
-                                    <td data-cell="S/N">2</td>
-                                    <td data-cell="name">Desktop Mockup</td>
-                                    <td data-cell="Category ">Software</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
+                                    <td data-cell="S/N">1</td>
+                                    <td data-cell="Sender">Dominic</td>
+                                    <td data-cell="Amount ">$300</td>
+                                    <td data-cell="Status" class="pending">pending</td>
+                                    <td data-cell="Package ">Iphone 15 pro</td>
+                                    <td data-cell="Date ">1/2/3404</td>
+                                    <td data-cell="Action" class="actions"><a href="" class="editShipmentBtn"><i class="fa-solid fa-eye"></i> <span>view</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
                                 </tr>
                                 <tr>
-                                    <td data-cell="S/N">3</td>
-                                    <td data-cell="name">Desktop Mockup</td>
-                                    <td data-cell="Category ">Software</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
+                                    <td data-cell="S/N">1</td>
+                                    <td data-cell="Sender">Dominic</td>
+                                    <td data-cell="Amount ">$300</td>
+                                    <td data-cell="Status" class="success">success</td>
+                                    <td data-cell="Package ">Iphone 15 pro</td>
+                                    <td data-cell="Date ">1/2/3404</td>
+                                    <td data-cell="Action" class="actions"><a href="" class="editShipmentBtn"><i class="fa-solid fa-eye"></i> <span>view</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
                                 </tr>
                                 <tr>
-                                    <td data-cell="S/N">4</td>
-                                    <td data-cell="name">Desktop Mockup</td>
-                                    <td data-cell="Category ">Software</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
+                                    <td data-cell="S/N">1</td>
+                                    <td data-cell="Sender">Dominic</td>
+                                    <td data-cell="Amount ">$300</td>
+                                    <td data-cell="Status" class="success">success</td>
+                                    <td data-cell="Package ">Iphone 15 pro</td>
+                                    <td data-cell="Date ">1/2/3404</td>
+                                    <td data-cell="Action" class="actions"><a href="" class="editShipmentBtn"><i class="fa-solid fa-eye"></i> <span>view</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
                                 </tr>
-
-                                <!-- <tr>
-                                    <td data-cell="S/N">2</td>
-                                    <td data-cell="name">Websites</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td data-cell="S/N">3</td>
-                                    <td data-cell="name">Web & Mobile apps</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td data-cell="S/N">4</td>
-                                    <td data-cell="name">Graphics</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td data-cell="S/N">5</td>
-                                    <td data-cell="name">Video Animations</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td data-cell="S/N">5</td>
-                                    <td data-cell="name">UI/UX designs</td>
-                                    <td data-cell="time" class="actions"><a href="./projectedit.html"><i class="fa-solid fa-pen-to-square"></i> <span>edit</span></a><a href="#"><i class="fa-solid fa-trash-can"></i><span>delete</span></a></td>
-                                </tr> -->
+                            
+                             
                             </tbody>
                         </table>
                         <div class="pagination">
@@ -185,7 +204,8 @@
                 <!-- services -->
 
             </div>
-
-            <script src="./js/script.js"></script>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="./assets/js/script.js"></script>
         </body>
     </html>

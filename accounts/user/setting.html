@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!--=====font awesome CDN =====-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--=====font awesome CDN =====-->
+
+        <!--=====css links=====-->
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+
+        <!-- Modal -->
+        <div id="editModal" class="modal">
+       <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Details</h2>
+            <div class="trasactions-display">
+                <h3>Transfer from Dominic</h3>
+                 <div class="amount">$300.00</div>
+                 <small class="status success">
+                    <i class="fa fa-check"></i>
+                    <span class="success">successful</span>
+                 </small>
+            </div>
+
+            <div class="trans-details">
+                <h2>transaction details</h2>
+
+                <ul>
+                    <li>transaction type <span>Bank deposit</span></li>
+                    <li>Senders Details <span>Dominic Chigozie</span></li>
+                    <li>Transaction No. <span>2239u9u9499800</span></li>
+                    <li>Transaction No. <span>Dec 25th, 2023 09:34</span></li>
+                </ul>
+            </div>
+            
+        </div>
+        </div>
+
+        <div class="body-container">
+            <!-- ==the side bar== -->
+            <header>
+                <i class="fa-regular fa-circle-xmark"></i>
+ 
+                <div class="logo">
+                    <a href="#"><img src="./assets/img/dev.png" alt></a>
+                </div>
+
+                <!-- the admin thumbnail -->
+                <div class="admin-thubnail">
+                    <div class="admin-image">
+                        <img src="./assets/img/CEO.jpg" alt>
+                    </div>
+                    <div class="admin-info">
+                        <h4>John Milk</h4>
+                        <p>Admin</p>
+                    </div>
+                </div>
+
+               <!-- the list items -->
+                <ul class="nav-list">
+                    <li><a href="index.html"><i
+                                class="fa-solid fa-gauge"></i>
+                            <span>Dashbard</span></a></li>
+                    <li><a href="shipment.html"><i class="fa-solid fa-truck"></i>
+                            <span>Shipment</span></a></li>
+                    <li><a href="./payment.html"><i class="fa-solid fa-credit-card"></i>
+                            <span>Payment History</span></a></li>
+                    <li class="active"><a href="./setting.html"><i class="fa-solid fa-sliders"></i>
+                            <span>Settings</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-headset"></i>
+                            <span>Support / Help Desk</span></a></li>
+                </ul>
+
+                
+            </header>
+
+            <!-- ==the side bar== -->
+            <div class="maincontainer">
+                <!--======== top menu ======-->
+                <div class="top-menu">
+                    <div class="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="search">
+                        <form action="#">
+                            <input type="search" name="search">
+                            <button type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <div
+                            class="notfication-box dropdown-btn"><span><i
+                                    class="fa-solid fa-bell"></i></span><span class="dsm">Notifications</span>
+                                    <span class="count">5</span> <i
+                                        class="fa-solid fa-chevron-down"></i>
+                                    <ul class="dropdown">
+                                        <li class="whitecol"><a
+                                                href="#">Profile Add <span>15
+                                                    minutes
+                                                    ago</span></a></li>
+                                        <li class="whitecol"><a href="#">New
+                                                user Add <span>15 minutes
+                                                    ago</span></a></li>
+                                    </ul>
+                                </div>
+                        <div class="admin-thubnail dropdown-btn">
+                            <div class="admin-image">
+                                <img src="./assets/img/CEO.jpg" alt>
+                            </div>
+                            <div class="admin-info">
+                                <h4>John Milk</h4>
+                                <i
+                                    class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <ul class="dropdown">
+                                <li><a href="#">My profile</a></li>
+                                <li><a href="/index.html">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--======== top menu ======-->
+
+                <!-- services -->
+                 <div class="service">
+                    <div class="bottom">
+                   <div class="profile-content">
+                        <div class="profile-image-section">
+                            <div class="profile-image">
+                                <img src="./assets/img/CEO.jpg" alt="">
+                            </div>
+                            <div class="upload-button">
+                                <div class="upload-div">
+                                    <form action="#" class="editsetting">
+                                        <input type="file" id="file">
+                                        <label for="file" class="upload">Upload new</>
+                                    </form>
+                                </div>
+
+                                <a href="#" class="delete-btn">Delete avatar</a>
+                                <a href="./changepassword.html" class="delete-btn">Edit Password</a>
+                            </div>
+                        </div>
+                        <div class="edit-fo">
+                            <form action="#">
+                                <div class="input-field">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" placeholder="First name">
+                                </div>
+                               
+                                <div class="input-field">
+                                    <label for="mail">Email</label>
+                                    <input type="text" placeholder="examples@gmail.com">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Moblie number</label>
+                                    <input type="text" placeholder="100 399 0029">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Gender</label>
+                                    <div class="gender">
+                                        <div class="g-box">
+                                            <input type="radio" name="#" id="">
+                                            <span>male</span>
+                                        </div>
+                                        <div class="g-box">
+                                            <input type="radio" name="#" id="">
+                                            <span>female</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Optional Moblie number</label>
+                                    <input type="text" placeholder="100 399 0029">
+                                </div>
+                                
+                                <div class="input-field">
+                                    <label for="number">Zip/Postal</label>
+                                    <input type="text" placeholder="1400 3599 0029">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Country</label>
+                                    <input type="text" placeholder="Nigeria">
+                                </div>
+                                <div class="input-field">
+                                    <label for="number">Residence Address</label>
+                                    <input type="text" placeholder="Ib street Orogun Ibadan">
+                                </div>
+
+                                <button>Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+
+                 </div>
+                <!-- services -->
+
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="./assets/js/script.js"></script>
+        </body>
+    </html>
